@@ -2,28 +2,32 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Your Portfolio</title>
+  <title>Amith Portfolio</title>
+
+  <!-- FONT -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- ✅ LOADER (TOP) -->
+<!-- LOADER -->
 <div id="loader">
   <div class="spinner"></div>
 </div>
 
-<!-- ✅ HERO -->
+<!-- HERO -->
 <section class="hero">
   <h1>I Build Websites</h1>
-  <p>Modern. Fast. Beautiful.</p>
+  <p>Modern. Fast. Beautiful. I create websites that help businesses grow.</p>
 </section>
 
-<!-- ✅ PROJECTS -->
+<!-- PROJECTS -->
 <section class="projects">
 
   <div class="card">
-    <img src="https://via.placeholder.com/300">
+    <img src="https://via.placeholder.com/400x300">
     <div class="overlay">
       <h3>Project 1</h3>
       <p>View Project</p>
@@ -31,7 +35,7 @@
   </div>
 
   <div class="card">
-    <img src="https://via.placeholder.com/300">
+    <img src="https://via.placeholder.com/400x300">
     <div class="overlay">
       <h3>Project 2</h3>
       <p>View Project</p>
@@ -39,7 +43,7 @@
   </div>
 
   <div class="card">
-    <img src="https://via.placeholder.com/300">
+    <img src="https://via.placeholder.com/400x300">
     <div class="overlay">
       <h3>Project 3</h3>
       <p>View Project</p>
@@ -48,21 +52,20 @@
 
 </section>
 
-<!-- ✅ ABOUT -->
+<!-- ABOUT -->
 <section class="about">
   <h2>About Me</h2>
-  <p>I create websites for businesses.</p>
+  <p>I’m Amith, a web developer from Bengaluru. I build clean, modern, responsive websites for businesses and personal brands.</p>
 </section>
 
-<!-- ✅ JAVASCRIPT (BOTTOM ONLY) -->
+<!-- JS -->
 <script>
-
-// ✅ LOADER
+// LOADER
 window.addEventListener("load", () => {
   document.getElementById("loader").style.display = "none";
 });
 
-// ✅ SCROLL FADE-IN (you already had, fixed)
+// SCROLL REVEAL
 window.addEventListener("scroll", () => {
   document.querySelectorAll(".card").forEach(card => {
     let position = card.getBoundingClientRect().top;
@@ -75,7 +78,7 @@ window.addEventListener("scroll", () => {
   });
 });
 
-// ✅ TILT EFFECT
+// TILT
 document.querySelectorAll(".card").forEach(card => {
   card.addEventListener("mousemove", e => {
     let rect = card.getBoundingClientRect();
@@ -95,7 +98,6 @@ document.querySelectorAll(".card").forEach(card => {
     card.style.transform = "rotateX(0) rotateY(0)";
   });
 });
-
 </script>
 
 </body>
