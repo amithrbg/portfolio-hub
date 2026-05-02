@@ -1,66 +1,83 @@
-/* General page styling */
+/* Global */
 body {
-  font-family: Arial, sans-serif;
   margin: 0;
-  padding: 0;
+  font-family: 'Montserrat', sans-serif;
+  background: #111;
+  color: #eee;
   line-height: 1.6;
-  background: #f9f9f9;
-  color: #333;
 }
 
-/* Hero section */
-header.hero {
-  background: #222;
-  color: #fff;
+/* Hero */
+.hero {
+  height: 100vh;
+  background: url('hero-bg.jpg') no-repeat center center/cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  padding: 60px 20px;
+}
+.hero h1 {
+  font-size: 4rem;
+  margin: 0;
+  color: #fff;
+}
+.hero p {
+  font-size: 1.5rem;
+  color: #ccc;
 }
 
-/* Typing animation */
-.typing {
-  border-right: 2px solid #fff;
-  white-space: nowrap;
-  overflow: hidden;
-  animation: typing 4s steps(30, end), blink .75s step-end infinite;
-}
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-
-@keyframes blink {
-  50% { border-color: transparent }
-}
-
-/* Section layout */
-section {
-  padding: 40px 20px;
-  max-width: 900px;
+/* Sections */
+.section {
+  padding: 80px 20px;
+  max-width: 1000px;
   margin: auto;
 }
-
-h2 {
-  margin-bottom: 20px;
-  color: #444;
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  color: #fff;
 }
 
-/* Project cards */
-.project-card {
-  background: #fff;
-  padding: 20px;
-  margin-bottom: 20px;
+/* Projects Grid */
+.projects .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+.card {
+  position: relative;
+  overflow: hidden;
   border-radius: 8px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  transition: transform 0.3s ease;
+}
+.card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+.overlay {
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  color: #fff;
+  width: 100%;
+  padding: 20px;
+  transform: translateY(100%);
+  transition: transform 0.4s ease;
+}
+.card:hover .overlay {
+  transform: translateY(0);
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
+/* Contact */
+.contact p, .contact a {
+  text-align: center;
+  color: #ccc;
 }
-
-/* Contact links */
 .contact a {
-  color: #0066cc;
+  color: #4da3ff;
   text-decoration: none;
 }
