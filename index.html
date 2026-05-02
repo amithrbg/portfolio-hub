@@ -2,94 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Amith's Portfolio Hub</title>
+  <title>Your Portfolio</title>
   <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <!-- Loader -->
-  <div id="loader">
-    <div class="spinner"></div>
-  </div>
 
-  <!-- Hero Section -->
-  <header class="hero">
-    <div class="hero-content">
-      <h1>Amith Rbg</h1>
-      <p>Web Developer • Designer • Creator</p>
-    </div>
-  </header>
+  <!-- HERO -->
+  <section class="hero">
+    <h1>I Build Websites</h1>
+    <p>Modern. Fast. Beautiful.</p>
+  </section>
 
-  <!-- About Section -->
-  <section id="about" class="section">
+  <!-- PROJECTS -->
+  <section class="projects">
+    <div class="card">Project 1</div>
+    <div class="card">Project 2</div>
+    <div class="card">Project 3</div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
     <h2>About Me</h2>
-    <p>Hi, I’m Amith — a passionate web developer from Bengaluru, India. I love building clean, modern websites that balance functionality with design. My journey started with experimenting on small demo projects, and now I’m creating a portfolio hub to showcase my work.</p>
-    <p>I enjoy exploring AI tools for productivity, reading manga for inspiration, and constantly learning new web technologies. My goal is to craft recruiter‑friendly projects that demonstrate both creativity and technical skill.</p>
+    <p>I create websites for businesses.</p>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="section projects">
-    <h2>Projects</h2>
-    <div class="grid">
-      <div class="card">
-        <img src="project1.jpg" alt="Portfolio Hub">
-        <div class="overlay">
-          <h3>Portfolio Hub</h3>
-          <p>Central hub showcasing demo websites with clean design.</p>
-        </div>
-      </div>
-      <div class="card">
-        <img src="project2.jpg" alt="Demo Website">
-        <div class="overlay">
-          <h3>Demo Website</h3>
-          <p>Static site deployed with GitHub Pages, featuring animations.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="section contact">
-    <h2>Contact</h2>
-    <p>Email: <strong>amithboss555@gmail.com</strong></p>
-    <p>GitHub: <a href="https://github.com/AmithRbg" target="_blank">AmithRbg</a></p>
-  </section>
-
-  <!-- Scripts -->
-  <script>
-    // Tilt effect
-    document.querySelectorAll('.card').forEach(card => {
-      card.addEventListener('mousemove', e => {
-        const rect = card.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = ((y - centerY) / centerY) * 5;
-        const rotateY = ((x - centerX) / centerX) * -5;
-        card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-      });
-      card.addEventListener('mouseleave', () => {
-        card.style.transform = 'rotateX(0) rotateY(0)';
-      });
-    });
-
-    // Smooth scroll
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-          behavior: 'smooth'
-        });
-      });
-    });
-
-    // Loader hide
-    window.addEventListener("load", () => {
-      document.getElementById("loader").style.display = "none";
-    });
-  </script>
 </body>
 </html>
-<link rel="stylesheet" href="style.css">
