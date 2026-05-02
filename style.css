@@ -47,3 +47,7 @@ body {
 .about {
   padding: 50px;
 }
+.card {
+  opacity: 0;
+  transform: translateY(50px);
+}
