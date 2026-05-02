@@ -1,31 +1,60 @@
-/* Smooth fade-in animation for sections */
-.about, .contact, .projects {
-  opacity: 0;
-  transform: translateY(30px);
-  animation: fadeInUp 1s forwards;
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #333;
 }
 
-.about { animation-delay: 0.3s; }
-.projects { animation-delay: 0.6s; }
-.contact { animation-delay: 0.9s; }
-
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Button click animation */
-.btn:active {
-  transform: scale(0.95);
-  background: #ff6f61;
+header.hero {
+  background: #222;
   color: #fff;
-  transition: transform 0.1s ease;
+  text-align: center;
+  padding: 60px 20px;
 }
 
-/* Card hover animation */
-.card:hover {
-  transform: translateY(-10px) scale(1.02);
-  box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+.typing {
+  border-right: 2px solid #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(30, end), blink .75s step-end infinite;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink {
+  50% { border-color: transparent }
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: #444;
+}
+
+.project-card {
+  background: #fff;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+.contact a {
+  color: #0066cc;
+  text-decoration: none;
 }
