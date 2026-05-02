@@ -5,30 +5,64 @@
   <title>Your Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-  <!-- HERO -->
-  <section class="hero">
-    <h1>I Build Websites</h1>
-    <p>Modern. Fast. Beautiful.</p>
-  </section>
+<!-- ✅ LOADER (TOP) -->
+<div id="loader">
+  <div class="spinner"></div>
+</div>
 
-  <!-- PROJECTS -->
-  <section class="projects">
-    <div class="card">Project 1</div>
-    <div class="card">Project 2</div>
-    <div class="card">Project 3</div>
-  </section>
+<!-- ✅ HERO -->
+<section class="hero">
+  <h1>I Build Websites</h1>
+  <p>Modern. Fast. Beautiful.</p>
+</section>
 
-  <!-- ABOUT -->
-  <section class="about">
-    <h2>About Me</h2>
-    <p>I create websites for businesses.</p>
-  </section>
+<!-- ✅ PROJECTS -->
+<section class="projects">
 
-</body>
-</html>
+  <div class="card">
+    <img src="https://via.placeholder.com/300">
+    <div class="overlay">
+      <h3>Project 1</h3>
+      <p>View Project</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300">
+    <div class="overlay">
+      <h3>Project 2</h3>
+      <p>View Project</p>
+    </div>
+  </div>
+
+  <div class="card">
+    <img src="https://via.placeholder.com/300">
+    <div class="overlay">
+      <h3>Project 3</h3>
+      <p>View Project</p>
+    </div>
+  </div>
+
+</section>
+
+<!-- ✅ ABOUT -->
+<section class="about">
+  <h2>About Me</h2>
+  <p>I create websites for businesses.</p>
+</section>
+
+<!-- ✅ JAVASCRIPT (BOTTOM ONLY) -->
 <script>
+
+// ✅ LOADER
+window.addEventListener("load", () => {
+  document.getElementById("loader").style.display = "none";
+});
+
+// ✅ SCROLL FADE-IN (you already had, fixed)
 window.addEventListener("scroll", () => {
   document.querySelectorAll(".card").forEach(card => {
     let position = card.getBoundingClientRect().top;
@@ -40,4 +74,29 @@ window.addEventListener("scroll", () => {
     }
   });
 });
+
+// ✅ TILT EFFECT
+document.querySelectorAll(".card").forEach(card => {
+  card.addEventListener("mousemove", e => {
+    let rect = card.getBoundingClientRect();
+    let x = e.clientX - rect.left;
+    let y = e.clientY - rect.top;
+
+    let centerX = rect.width / 2;
+    let centerY = rect.height / 2;
+
+    let rotateX = -(y - centerY) / 10;
+    let rotateY = (x - centerX) / 10;
+
+    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+  });
+
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "rotateX(0) rotateY(0)";
+  });
+});
+
 </script>
+
+</body>
+</html>
