@@ -1,104 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Amith Portfolio</title>
-
-  <!-- FONT -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <title>Amith Portfolio Hub</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-
-<!-- LOADER -->
-<div id="loader">
-  <div class="spinner"></div>
-</div>
-
-<!-- HERO -->
-<section class="hero">
-  <h1>I Build Websites</h1>
-  <p>Modern. Fast. Beautiful. I create websites that help businesses grow.</p>
-</section>
-
-<!-- PROJECTS -->
-<section class="projects">
-
-  <div class="card">
-    <img src="https://via.placeholder.com/400x300">
-    <div class="overlay">
-      <h3>Project 1</h3>
-      <p>View Project</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="https://via.placeholder.com/400x300">
-    <div class="overlay">
-      <h3>Project 2</h3>
-      <p>View Project</p>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="https://via.placeholder.com/400x300">
-    <div class="overlay">
-      <h3>Project 3</h3>
-      <p>View Project</p>
-    </div>
-  </div>
-
-</section>
-
-<!-- ABOUT -->
-<section class="about">
-  <h2>About Me</h2>
-  <p>I’m Amith, a web developer from Bengaluru. I build clean, modern, responsive websites for businesses and personal brands.</p>
-</section>
-
-<!-- JS -->
-<script>
-// LOADER
-window.addEventListener("load", () => {
-  document.getElementById("loader").style.display = "none";
-});
-
-// SCROLL REVEAL
-window.addEventListener("scroll", () => {
-  document.querySelectorAll(".card").forEach(card => {
-    let position = card.getBoundingClientRect().top;
-    let screenHeight = window.innerHeight;
-
-    if (position < screenHeight - 100) {
-      card.style.opacity = 1;
-      card.style.transform = "translateY(0)";
-    }
-  });
-});
-
-// TILT
-document.querySelectorAll(".card").forEach(card => {
-  card.addEventListener("mousemove", e => {
-    let rect = card.getBoundingClientRect();
-    let x = e.clientX - rect.left;
-    let y = e.clientY - rect.top;
-
-    let centerX = rect.width / 2;
-    let centerY = rect.height / 2;
-
-    let rotateX = -(y - centerY) / 10;
-    let rotateY = (x - centerX) / 10;
-
-    card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
-  });
-
-  card.addEventListener("mouseleave", () => {
-    card.style.transform = "rotateX(0) rotateY(0)";
-  });
-});
-</script>
-
+    <header>
+        <div class="banner">
+            <img src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?auto=format&fit=crop&w=1000&q=80" alt="anime banner">
+            <div class="avatar">
+                <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=400&q=80" alt="anime avatar">
+            </div>
+            <div class="intro">
+                <h1>Amith.R <span class="city-tag">Mysuru</span></h1>
+                <p class="tagline">🚀 Building Cool Stuff | Fast, Sleek Web Solutions | Anime Vibes</p>
+            </div>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#portfolio">Portfolio</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+    <main>
+        <section id="portfolio">
+            <h2>My Projects</h2>
+            <div class="projects">
+                <div class="card">
+                    <img src="https://img.freepik.com/free-photo/anime-style-illustration-colorful-background_23-2151329175.jpg?w=826" alt="Project 1 Anime">
+                    <h3>Website Project One</h3>
+                    <p>Anime-inspired eCommerce demo. Fast, mobile, clean UI.</p>
+                    <div class="buttons">
+                        <a href="#" class="demo-btn">Demo</a>
+                        <a href="#" class="buy-btn">Buy</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://wallpapercrafter.com/sizes/1366x768/183519-anime-landscape-sunset-art-clouds.jpg" alt="Project 2 Anime">
+                    <h3>Portfolio Web App</h3>
+                    <p>Modern React portfolio, slick transitions, anime theme.</p>
+                    <div class="buttons">
+                        <a href="#" class="demo-btn">Demo</a>
+                        <a href="#" class="buy-btn">Buy</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=400&q=80" alt="Project 3 Anime">
+                    <h3>Gym Website</h3>
+                    <p>Dark neon, parallax gym page styled for serious training.</p>
+                    <div class="buttons">
+                        <a href="#" class="demo-btn">Demo</a>
+                        <a href="#" class="buy-btn">Buy</a>
+                    </div>
+                </div>
+                <!-- Add more projects as needed -->
+            </div>
+        </section>
+        <section id="contact" class="contact-section">
+            <h2>Contact</h2>
+            <div class="contact-info">
+                <p><strong>Email:</strong> <a href="mailto:amithboss555@gmail.com">amithboss555@gmail.com</a></p>
+                <p><strong>Name:</strong> Amith.R</p>
+                <p><strong>Location:</strong> Mysuru</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        &copy; 2026 Amith.R | Made with ❤️ and Anime Power
+    </footer>
 </body>
 </html>
