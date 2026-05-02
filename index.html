@@ -3,94 +3,58 @@
 <head>
   <meta charset="UTF-8">
   <title>Amith Rbg | Ready Websites Portfolio</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <nav>
+    <div class="container">
       <div class="logo">Amith Rbg</div>
-      <div>
+      <nav>
         <a href="#about">About</a>
-        <a href="#projects">Websites</a>
         <a href="#contact">Contact</a>
-      </div>
-    </nav>
+      </nav>
+    </div>
   </header>
 
-  <section class="hero">
-    <div class="hero-content">
-      <h1>Ready-To-Use Websites For Your Business</h1>
-      <p>Get a beautiful, professional website for your gym, restaurant, barber shop, coaching class, or local shop. No coding needed. Ready to launch as soon as you buy!</p>
-      <a class="button" href="#contact">Get Yours Now</a>
-    </div>
-    <img class="hero-img" src="https://images.unsplash.com/photo-1519125323398-675f0ddb6308?fit=crop&w=600&q=80" alt="Portfolio hero">
-  </section>
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1>Ready-To-Use Websites For Your Business</h1>
+        <p>I create and sell attractive, fast, and professional websites ready for immediate use. No tech skills needed. Your online journey starts here!</p>
+      </div>
+    </section>
 
-  <section id="about" class="about">
-    <h2>About Me</h2>
-    <p>Hi, I'm Amith Rbg – I help businesses get more customers with fast, attractive, and hassle-free websites. Choose from my exclusive, ready-to-use site designs and get online in no time!</p>
-  </section>
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          Hi, I'm Amith Rbg. I help businesses and individuals get online with modern, ready-to-use websites.<br>
+          My designs are simple, fast, and reliable—just plug in your info and go live!
+        </p>
+      </div>
+    </section>
 
-  <section id="projects" class="projects">
-    <h2>Website Templates</h2>
-    <div class="cards-list">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?fit=crop&w=400&q=80" alt="Gym Website" />
-        <h3>Gym Website</h3>
-        <p>Perfect for fitness centers and gyms.</p>
-        <a href="#" class="button small">Preview</a>
-        <a href="#contact" class="button small secondary">Buy</a>
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Interested in a website? Have questions? Contact me below:</p>
+        <form>
+          <input type="text" placeholder="Your Name" required>
+          <input type="email" placeholder="Your Email" required>
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <div class="contact-details">
+          <strong>Email:</strong> amithrbg@email.com<br>
+          <strong>Phone:</strong> +91 98765-43210
+        </div>
       </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef5e?fit=crop&w=400&q=80" alt="Restaurant Website" />
-        <h3>Restaurant Website</h3>
-        <p>Designed for restaurants and cafes.</p>
-        <a href="#" class="button small">Preview</a>
-        <a href="#contact" class="button small secondary">Buy</a>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?fit=crop&w=400&q=80" alt="Barber Shop Website" />
-        <h3>Barber Shop Website</h3>
-        <p>Modern look for salons and barbers.</p>
-        <a href="#" class="button small">Preview</a>
-        <a href="#contact" class="button small secondary">Buy</a>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1503676382389-4809596d5290?fit=crop&w=400&q=80" alt="Coaching Class Website" />
-        <h3>Coaching Class Website</h3>
-        <p>Coaching and tuition classes platform.</p>
-        <a href="#" class="button small">Preview</a>
-        <a href="#contact" class="button small secondary">Buy</a>
-      </div>
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?fit=crop&w=400&q=80" alt="Local Shop Website" />
-        <h3>Local Shop Website</h3>
-        <p>Great for groceries or retail shops.</p>
-        <a href="#" class="button small">Preview</a>
-        <a href="#contact" class="button small secondary">Buy</a>
-      </div>
-    </div>
-  </section>
-
-  <section id="contact" class="contact">
-    <h2>Contact Me</h2>
-    <p>Interested? Questions? Fill out the form below and I’ll get back to you same day!</p>
-    <form class="contact-form">
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="What website are you interested in?" required></textarea>
-      <button type="submit" class="button">Send</button>
-    </form>
-    <div class="contact-details">
-      <b>Email:</b> amithrbg@email.com<br>
-      <b>Phone:</b> +91 98765-43210<br>
-      <b>Location:</b> Bangalore, India
-    </div>
-  </section>
+    </section>
+  </main>
 
   <footer>
-    &copy; 2026 Amith Rbg — Portfolio
+    &copy; 2026 Amith Rbg | Portfolio
   </footer>
 </body>
 </html>
