@@ -1,20 +1,18 @@
-
+# Amith's Portfolio Hub
 
 Welcome to my personal portfolio hub — a central place to showcase my demo websites, creative experiments, and technical projects.  
-This site is built with **HTML + CSS**, deployed via **Netlify**, and designed to be recruiter‑friendly.
+This site is built with **HTML + CSS**, deployed via **GitHub Pages**, and designed to be recruiter‑friendly.
 
 ---
 
 ## 🚀 Live Demo
-Check out the live site here:  
-[demo-site-amith.netlify.app](https://demo-site-amith.netlify.app)
+[https://amithrbg.github.io/Portfolio-Hub/](https://amithrbg.github.io/Portfolio-Hub/)
 
 ---
 
 ## 📂 Project Structure
 - `index.html` — Homepage with hero, projects, about, and contact sections
 - `style.css` — Custom styles with animations
-- `artifacts/`, `scripts/` — Supporting files
 - `README.md` — Project overview
 
 ---
@@ -28,7 +26,7 @@ Check out the live site here:
 ---
 
 ## 🛠️ Deployment
-- Hosted on **Netlify**
+- Hosted on **GitHub Pages**
 - Auto‑deploys from the **main branch** of this GitHub repo
 - Continuous integration ensures updates go live instantly
 
