@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>AMITH.R | Ready Websites Portfolio</title>
+  <title>AMITH.R | Ready-To-Use Website Templates</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -11,70 +11,120 @@
     <div class="container">
       <div class="logo">AMITH.R</div>
       <nav>
-        <a href="#websites">Websites</a>
-        <a href="#contact">Contact</a>
+        <a href="#projects">Websites</a>
         <a href="#about">About</a>
+        <a href="#contact">Contact</a>
         <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
       </nav>
     </div>
   </header>
 
   <main>
+    <!-- HERO SECTION -->
     <section class="hero">
       <div class="container">
-        <h1>Ready-To-Use Websites for Your Business</h1>
-        <p>I create and sell professional, fast, and attractive websites that help your business grow.<br>Just choose a template, view the demo, and contact me to get started!</p>
-        <a href="#websites" class="main-cta">See My Websites ↓</a>
+        <h1>Hi, I'm Amith</h1>
+        <h2>I build modern, ready-to-use websites for your business</h2>
+        <p>
+          Browse my professionally-coded website templates. <br>
+          Buy any, get it customized, and boost your online presence—fast and affordable!
+        </p>
+        <a href="#projects" class="main-cta">Explore Websites ↓</a>
       </div>
     </section>
 
-    <section id="websites" class="websites">
+    <!-- PROJECTS -->
+    <section id="projects" class="projects">
       <div class="container">
-        <h2>Website Demos</h2>
-        <div class="cards-list">
-          <!-- CARD (copy to add more) -->
-          <div class="card">
+        <h2>Website Templates</h2>
+        <div class="project-cards-list">
+
+          <!-- ====== PROJECT CARD 1 ====== -->
+          <div class="project-card">
             <h3>Gym Website</h3>
-            <p>Perfect for gyms and fitness centers. Modern, bold, and action-packed.</p>
-            <div class="btn-row">
-              <a href="https://your-gym-demo-link.com" target="_blank" class="button demo-btn">Demo</a>
-              <button type="button" class="button buy-btn" onclick="showBuyInfo('Gym Website')">Buy</button>
+            <p>
+              Attract fitness clients with a bold, energetic landing page and class schedule.<br>
+              <span class="project-best">Best for:</span> Gyms, trainers, fitness studios
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>Responsive</span>
+            </div>
+            <div class="price">Price: <span>₹1499</span></div>
+            <div class="project-buttons">
+              <a href="https://your-gym-demo-link.com" class="button demo-btn" target="_blank">Free Demo</a>
+              <button class="button buy-btn" onclick="showBuyInfo('Gym Website','₹1499')">Buy / Contact</button>
             </div>
           </div>
-          <div class="card">
+          <!-- ====== PROJECT CARD 2 ====== -->
+          <div class="project-card">
             <h3>Restaurant Website</h3>
-            <p>Tasteful design for restaurants and cafes. Menu, gallery, reservation-ready.</p>
-            <div class="btn-row">
-              <a href="https://your-restaurant-demo-link.com" target="_blank" class="button demo-btn">Demo</a>
-              <button type="button" class="button buy-btn" onclick="showBuyInfo('Restaurant Website')">Buy</button>
+            <p>
+              A mouth-watering site for restaurants/cafes: menu, booking & gallery.<br>
+              <span class="project-best">Best for:</span> Restaurants, food delivery
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span><span>Fast</span>
+            </div>
+            <div class="price">Price: <span>₹1799</span></div>
+            <div class="project-buttons">
+              <a href="https://your-restaurant-demo-link.com" class="button demo-btn" target="_blank">Free Demo</a>
+              <button class="button buy-btn" onclick="showBuyInfo('Restaurant Website','₹1799')">Buy / Contact</button>
             </div>
           </div>
-          <div class="card">
-            <h3>Barber Shop Website</h3>
-            <p>Classic, sharp style for barbers and salons. Showcase your lookbook and bookings.</p>
-            <div class="btn-row">
-              <a href="https://your-barber-demo-link.com" target="_blank" class="button demo-btn">Demo</a>
-              <button type="button" class="button buy-btn" onclick="showBuyInfo('Barber Shop Website')">Buy</button>
+          <!-- ====== EXAMPLE FOR MORE PROJECTS. DUPLICATE TO ADD ====== -->
+          <div class="project-card">
+            <h3>Personal Portfolio</h3>
+            <p>
+              Showcase your skills and work. All you need is your story.<br>
+              <span class="project-best">Best for:</span> Freelancers, resumes, devs
+            </p>
+            <div class="project-tags">
+              <span>HTML</span><span>CSS</span>
+            </div>
+            <div class="price">Price: <span>₹799</span></div>
+            <div class="project-buttons">
+              <a href="https://your-portfolio-demo-link.com" class="button demo-btn" target="_blank">Free Demo</a>
+              <button class="button buy-btn" onclick="showBuyInfo('Personal Portfolio','₹799')">Buy / Contact</button>
             </div>
           </div>
-          <!-- Add more cards as needed -->
+          <!-- ===== END CARDS. COPY ABOVE TO ADD ===== -->
         </div>
 
         <!-- Buy Modal -->
         <div id="buy-modal" class="buy-modal">
           <div class="buy-modal-content">
             <span class="close-modal" onclick="closeBuyInfo()">&times;</span>
-            <h3>Want to Buy?</h3>
-            <p>Email me at<br><b style="color:#4393ff">amithboss555@gmail.com</b><br>Include the website name and I'll reply with payment & delivery details.</p>
+            <h3>Buy / Contact</h3>
+            <div id="buy-info-content"></div>
+            <div class="modal-contact">
+              <b>Email:</b> <a href="mailto:amithboss555@gmail.com">amithboss555@gmail.com</a>
+              <br>
+              <b>WhatsApp:</b> <a href="https://wa.me/919876543210" target="_blank">+91 98765-43210</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- ABOUT -->
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          I'm Amith, a front-end web developer building simple, beautiful, and effective website templates.<br>
+          My goal: make it fast and affordable for businesses to get online.<br>
+        </p>
+        <div class="skills">
+          <strong>Skills:</strong> HTML, CSS, JavaScript, Responsive Design
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="contact">
       <div class="container">
         <h2>Contact Me</h2>
-        <p>Interested in a website? Have questions? Let me know!</p>
+        <p>Interested in a website, or need custom work?<br>Contact me directly!</p>
         <form action="mailto:amithboss555@gmail.com" method="POST" enctype="text/plain">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
@@ -82,18 +132,10 @@
           <button type="submit">Send</button>
         </form>
         <div class="contact-details">
-          <strong>Email:</strong> amithboss555@gmail.com
+          <b>Email:</b> amithboss555@gmail.com
+          <br>
+          <b>WhatsApp:</b> +91 98765-43210
         </div>
-      </div>
-    </section>
-
-    <section id="about" class="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p>
-          Hi, I'm <b>AMITH.R</b>. I help businesses and individuals create their perfect website, hassle-free.<br>
-          All my websites are responsive, fast, and designed to help you win more customers.
-        </p>
       </div>
     </section>
   </main>
@@ -101,26 +143,31 @@
   <footer>
     <div class="container">
       &copy; 2026 AMITH.R | Portfolio
+      <!--
+      <div class="social">
+        <a href="https://github.com/amithrbg" target="_blank">GitHub</a>
+      </div>
+      -->
     </div>
   </footer>
-
   <script>
-  // DARK MODE
-  const html = document.documentElement;
-  const toggle = document.getElementById("darkToggle");
-  toggle.onclick = () => { html.classList.toggle("dark"); localStorage.setItem("amrDark", html.classList.contains("dark")) }
-  if(localStorage.getItem("amrDark") === "true") html.classList.add("dark");
+    // DARK MODE
+    const html = document.documentElement;
+    const toggle = document.getElementById("darkToggle");
+    toggle.onclick = () => { html.classList.toggle("dark"); localStorage.setItem("amrDark", html.classList.contains("dark")) }
+    if(localStorage.getItem("amrDark") === "true") html.classList.add("dark");
 
-  // BUY MODAL
-  function showBuyInfo(site) {
-    document.getElementById('buy-modal').style.display='flex';
-  }
-  function closeBuyInfo() {
-    document.getElementById('buy-modal').style.display='none';
-  }
-  window.onclick = function(e) {
-    if(e.target && e.target.id === 'buy-modal') closeBuyInfo();
-  }
+    // BUY MODAL
+    function showBuyInfo(site, price) {
+      document.getElementById('buy-modal').style.display='flex';
+      document.getElementById('buy-info-content').innerHTML = "<p><b>"+site+"</b><br>Price: "+price+"<br>Email or WhatsApp me and mention the website name. I'll reply with payment and delivery details!</p>";
+    }
+    function closeBuyInfo() {
+      document.getElementById('buy-modal').style.display='none';
+    }
+    window.onclick = function(e) {
+      if(e.target && e.target.id === 'buy-modal') closeBuyInfo();
+    }
   </script>
 </body>
 </html>
