@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Amith Rbg | Ready Websites Portfolio</title>
+  <title>AMITH.R | Ready Websites Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <div class="container">
-      <div class="logo">Amith Rbg</div>
+      <div class="logo">AMITH.R</div>
       <nav>
-        <a href="#about">About</a>
+        <a href="#demos">Websites</a>
         <a href="#contact">Contact</a>
+        <a href="#about">About</a>
+        <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
       </nav>
     </div>
   </header>
@@ -21,7 +23,64 @@
     <section class="hero">
       <div class="container">
         <h1>Ready-To-Use Websites For Your Business</h1>
-        <p>I create and sell attractive, fast, and professional websites ready for immediate use. No tech skills needed. Your online journey starts here!</p>
+        <p>I create and sell attractive, fast, and professional websites ready for immediate use. Your online journey starts here!</p>
+      </div>
+    </section>
+
+    <section id="demos" class="demos">
+      <div class="container">
+        <h2>My Website Demos</h2>
+        <div class="demo-list">
+          <!-- DEMO BLOCK START: Duplicate or remove this block to add/remove a website -->
+          <div class="demo-card">
+            <div class="demo-info">
+              <h3>Gym Website</h3>
+              <p>A modern, energetic template for gyms & fitness centers.</p>
+            </div>
+            <div class="demo-btns">
+              <a href="https://your-gym-demo-link.com" target="_blank" class="button demo-btn">Demo</a>
+              <button class="button buy-btn" onclick="showBuyInfo('Gym Website')">Buy</button>
+            </div>
+          </div>
+          <div class="demo-card">
+            <div class="demo-info">
+              <h3>Restaurant Website</h3>
+              <p>Elegant, appetizing look for restaurants & cafes.</p>
+            </div>
+            <div class="demo-btns">
+              <a href="https://your-restaurant-demo-link.com" target="_blank" class="button demo-btn">Demo</a>
+              <button class="button buy-btn" onclick="showBuyInfo('Restaurant Website')">Buy</button>
+            </div>
+          </div>
+          <!-- DEMO BLOCK END -->
+          <!-- ADD or REMOVE demo-card blocks as needed -->
+        </div>
+        <!-- Buy Info Modal -->
+        <div id="buy-modal" class="buy-modal">
+          <div class="buy-modal-content">
+            <span class="close-modal" onclick="closeBuyInfo()">&times;</span>
+            <h3>Buy This Website</h3>
+            <p>Email me at <b style="color:#4393ff">amithboss555@gmail.com</b><br>
+              Mention the website name and I’ll reply with payment & delivery details.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Me</h2>
+        <p>Interested in a website or got questions? Fill out the form to contact me directly via email:</p>
+        <form action="mailto:amithboss555@gmail.com" method="POST" enctype="text/plain">
+          <input type="text" name="name" placeholder="Your Name" required>
+          <input type="email" name="email" placeholder="Your Email" required>
+          <textarea name="message" placeholder="Your Message" required></textarea>
+          <button type="submit">Send</button>
+        </form>
+        <div class="contact-details">
+          <strong>Email:</strong> amithboss555@gmail.com
+        </div>
       </div>
     </section>
 
@@ -29,32 +88,34 @@
       <div class="container">
         <h2>About Me</h2>
         <p>
-          Hi, I'm Amith Rbg. I help businesses and individuals get online with modern, ready-to-use websites.<br>
+          Hi, I'm <b>AMITH.R</b>. I help businesses and individuals get online with modern, ready-to-use websites.<br>
           My designs are simple, fast, and reliable—just plug in your info and go live!
         </p>
-      </div>
-    </section>
-
-    <section id="contact" class="contact">
-      <div class="container">
-        <h2>Contact Me</h2>
-        <p>Interested in a website? Have questions? Contact me below:</p>
-        <form>
-          <input type="text" placeholder="Your Name" required>
-          <input type="email" placeholder="Your Email" required>
-          <textarea placeholder="Your Message" required></textarea>
-          <button type="submit">Send</button>
-        </form>
-        <div class="contact-details">
-          <strong>Email:</strong> amithrbg@email.com<br>
-          <strong>Phone:</strong> +91 98765-43210
-        </div>
       </div>
     </section>
   </main>
 
   <footer>
-    &copy; 2026 Amith Rbg | Portfolio
+    &copy; 2026 AMITH.R | Portfolio
   </footer>
+
+  <script>
+  // DARK MODE
+  const html = document.documentElement;
+  const toggle = document.getElementById("darkToggle");
+  toggle.onclick = () => { html.classList.toggle("dark"); localStorage.setItem("amrDark", html.classList.contains("dark")) }
+  if(localStorage.getItem("amrDark") === "true") html.classList.add("dark");
+
+  // BUY MODAL LOGIC
+  function showBuyInfo(site) {
+    document.getElementById('buy-modal').style.display='flex';
+  }
+  function closeBuyInfo() {
+    document.getElementById('buy-modal').style.display='none';
+  }
+  window.onclick = function(e) {
+    if(e.target && e.target.id === 'buy-modal') closeBuyInfo();
+  }
+  </script>
 </body>
 </html>
