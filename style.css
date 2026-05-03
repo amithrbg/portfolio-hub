@@ -1,17 +1,232 @@
 :root {
-  --main: #3366ff;
-  --bg: #f7fafc;
-  --card: #fff;
-  --text: #23272f;
-  --accent: #ff6f61;
+  --main: #262c3a;
+  --main2: #171b22;
+  --blue: #4393ff;
+  --accent: #0f141c;
+  --bg: #21242b;
+  --card: #23272f;
+  --btn: #262c3a;
+  --txt: #eef3fa;
 }
 
-* { box-sizing: border-box; }
-body {
-  margin: 0;
-  font-family: 'Montserrat', Arial, sans-serif;
+html, body { background: var(--bg); color: var(--txt);}
+html { transition: background 0.3s, color 0.3s; }
+body { margin: 0; font-family: 'Montserrat', Arial, sans-serif; }
+
+html.dark, html.dark body {
+  background: #111417 !important;
+  color: #39a5ff !important;
+}
+html.dark .card, html.dark header, html.dark footer, html.dark .about, html.dark .contact, html.dark .demo-card, html.dark .demos, html.dark .hero, html.dark .buy-modal-content {
+  background: #181b1e !important;
+  color: #39a5ff !important;
+}
+html.dark .button { background: #161c22!important; color: #39a5ff!important; border: 1.5px solid #39a5ff;}
+html.dark nav a, html.dark .logo {color:#39a5ff!important;}
+html.dark h1, html.dark h2, html.dark h3 { color: #39a5ff;}
+html.dark .buy-modal-content b {color: #39a5ff!important;}
+html.dark input, html.dark textarea {background:#101214; color:#fff;}
+html.dark .close-modal, html.dark #darkToggle {color:#39a5ff!important;}
+
+header {
+  background: var(--main);
+  border-bottom: 1.5px solid #1d2029;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  transition: background 0.3s;
+}
+.logo {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: var(--blue);
+  letter-spacing: 1px;
+  line-height: 68px;
+}
+nav {
+  float: right;
+  line-height: 68px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
+}
+nav a {
+  color: var(--txt);
+  text-decoration: none;
+  font-weight: 500;
+  padding: 2px 10px;
+  font-size: 1.04em;
+  border-radius: 5px;
+  transition: background 0.2s, color 0.2s;
+}
+nav a:hover,
+nav a.active { color: var(--blue); background: #252b39; }
+
+#darkToggle {
+  font-size: 1.13em;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--blue);
+  padding: 5px 12px;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+#darkToggle:hover { background: #252b39; }
+
+header .container { display: flex; justify-content: space-between; align-items: center; max-width:720px; padding:0 16px; margin:0 auto;}
+
+.hero {
+  padding: 50px 0 30px 0;
+  text-align: center;
+  background: var(--card);
+  border-radius:10px;
+  margin:34px 0 26px 0;
+  box-shadow: 0 3px 16px #4393ff09;
+}
+.hero h1 { color: var(--blue); font-size: 2em; margin-bottom: 12px;}
+.hero p { font-size: 1.15em; color: #b8d2fa; }
+
+.demos {
+  background: var(--card);
+  border-radius: 10px;
+  margin: 36px 0;
+  padding: 32px 20px 28px 20px;
+  box-shadow: 0 3px 16px #4393ff09;
+}
+
+h2 { color: var(--blue);}
+.demo-list {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+.demo-card {
   background: var(--bg);
-  color: var(--text);
+  border-radius: 9px;
+  box-shadow: 0 1px 10px #171b2233;
+  padding: 21px 18px 18px 18px;
+  flex: 1 1 240px;
+  min-width: 220px;
+  max-width: 310px;
+  margin-bottom: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: transform 0.2s;
+}
+.demo-card:hover { transform: translateY(-8px) scale(1.018); box-shadow:0 6px 24px #4393ff55; }
+.demo-info h3 { color: var(--blue); margin:8px 0 4px 0;}
+.demo-info p {color:#a6bae3; font-size:1.03em;}
+.demo-btns {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.button {
+  background: var(--main);
+  color: var(--blue);
+  border: 1.5px solid var(--blue);
+  border-radius: 20px;
+  padding: 8px 22px;
+  font-size: 1em;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  margin-right: 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.button.demo-btn { background: var(--blue); color: #fff;}
+.button.demo-btn:hover { background: #222c3b; color: var(--blue);}
+.button.buy-btn { background: none; color: var(--blue);}
+.button.buy-btn:hover { background: var(--blue); color: #fff;}
+.button:active { transform: scale(0.98);}
+
+.buy-modal {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  left:0; top:0; width:100vw; height:100vh;
+  background: rgba(21,23,33,0.75);
+  justify-content:center;
+  align-items: center;
+}
+.buy-modal-content {
+  background: var(--card);
+  color: var(--blue);
+  border-radius: 8px;
+  padding:26px 24px 18px 24px;
+  text-align:center;
+  min-width: 240px;
+  max-width: 90vw;
+  position: relative;
+  box-shadow:0 10px 60px #111d2588;
+  animation: pop-bounce 0.27s;
+}
+@keyframes pop-bounce {
+  0% {transform: scale(0.85);}
+  75% {transform: scale(1.03);}
+  100% {transform: scale(1);}
+}
+.close-modal {
+  position: absolute;
+  right: 18px; top: 8px;
+  font-size: 1.85em;
+  color: #4393ff;
+  cursor: pointer;
+}
+
+.contact, .about {
+  background: var(--card);
+  border-radius: 10px;
+  margin: 36px 0;
+  padding: 32px 20px;
+  box-shadow: 0 3px 16px #4393ff09;
+}
+.contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 20px 0 8px 0;
+}
+.contact form input, .contact form textarea {
+  padding: 12px;
+  border-radius: 4px;
+  border: 1.5px solid #3a537a;
+  background: #181b22;
+  font-size: 1em;
+  color: #fff;
+  font-family: inherit;
+  resize: vertical;
+}
+.contact form button {
+  background: var(--blue);
+  color: #fff;
+  border: none;
+  border-radius: 24px;
+  padding: 13px 0;
+  cursor: pointer;
+  margin-top: 8px;
+  font-size: 1em;
+  font-weight: 700;
+}
+.contact form button:hover { background: #232b3f; color: var(--blue);}
+.contact-details {
+  font-size: 1em;
+  color: #6daffe;
+  margin-top: 18px;
+}
+
+footer {
+  background: var(--main);
+  color: #71a7e9;
+  text-align: center;
+  padding: 18px 0 10px 0;
+  margin-top: 40px;
+  border-top: 1.5px solid #232e42;
+  font-size: 1em;
 }
 
 .container {
@@ -20,106 +235,14 @@ body {
   padding: 0 16px;
 }
 
-header {
-  border-bottom: 1.5px solid #eaeaea;
-  background: var(--card);
-  position: sticky;
-  top: 0;
-  z-index: 2;
-}
-.logo {
-  font-size: 1.4em;
-  font-weight: bold;
-  color: var(--main);
-  letter-spacing: 1px;
-  line-height: 68px;
-}
-nav {
-  float: right;
-  line-height: 68px;
-}
-nav a {
-  color: var(--text);
-  text-decoration: none;
-  margin-left: 22px;
-  font-weight: 500;
-}
-nav a:hover { color: var(--main); }
-header::after {
-  content: "";
-  display: table;
-  clear: both;
+@media (max-width: 720px) {
+  .demo-list { flex-direction: column; gap: 8px; }
+  header .container { flex-direction: column; gap:8px; }
+  .container { padding:0 5vw; }
+  nav { float:none; line-height:44px;}
 }
 
-.hero {
-  padding: 50px 0 30px 0;
-  text-align: center;
-}
-.hero h1 {
-  color: var(--main);
-  font-size: 2em;
-  margin-bottom: 12px;
-}
-.hero p {
-  font-size: 1.15em;
-  color: #444e62;
-}
-
-.about, .contact {
-  background: var(--card);
-  border-radius: 10px;
-  margin: 36px 0;
-  padding: 32px 20px;
-  box-shadow: 0 3px 16px #3366ff09;
-}
-h2 { color: var(--main); }
-.about p, .contact p { color: #3e4152; font-size:1.05em; }
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  margin: 20px 0 8px 0;
-}
-form input, form textarea {
-  padding: 12px;
-  border-radius: 4px;
-  border: 1.5px solid #d4e0fc;
-  resize: vertical;
-  font-size: 1em;
-  font-family: inherit;
-}
-form button {
-  background: var(--main);
-  color: #fff;
-  font-weight: 600;
-  border: none;
-  border-radius: 24px;
-  padding: 13px 0;
-  cursor: pointer;
-  margin-top: 8px;
-  font-size: 1em;
-}
-form button:hover { background: var(--accent); }
-
-.contact-details {
-  font-size: 1em;
-  color: #557;
-  margin-top: 18px;
-}
-
-footer {
-  background: var(--card);
-  color: #7b8bad;
-  text-align: center;
-  padding: 18px 0 10px 0;
-  margin-top: 40px;
-  border-top: 1.5px solid #eaeaea;
-  font-size: 1em;
-}
-
-@media (max-width: 600px) {
-  .container { padding: 0 6vw; }
-  nav { float: none; text-align:center; line-height:42px;}
-  header { text-align:center; }
-}
+::-webkit-input-placeholder { color: #679af7;}
+::-moz-placeholder { color: #679af7;}
+:-ms-input-placeholder { color: #679af7;}
+::placeholder { color: #679af7;}
