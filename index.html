@@ -11,7 +11,7 @@
     <div class="container">
       <div class="logo">AMITH.R</div>
       <nav>
-        <a href="#demos">Websites</a>
+        <a href="#websites">Websites</a>
         <a href="#contact">Contact</a>
         <a href="#about">About</a>
         <button id="darkToggle" aria-label="Toggle dark mode">🌙</button>
@@ -22,47 +22,53 @@
   <main>
     <section class="hero">
       <div class="container">
-        <h1>Ready-To-Use Websites For Your Business</h1>
-        <p>I create and sell attractive, fast, and professional websites ready for immediate use. Your online journey starts here!</p>
+        <h1>Ready-To-Use Websites for Your Business</h1>
+        <p>I create and sell professional, fast, and attractive websites that help your business grow.<br>Just choose a template, view the demo, and contact me to get started!</p>
+        <a href="#websites" class="main-cta">See My Websites ↓</a>
       </div>
     </section>
 
-    <section id="demos" class="demos">
+    <section id="websites" class="websites">
       <div class="container">
-        <h2>My Website Demos</h2>
-        <div class="demo-list">
-          <!-- DEMO BLOCK START: Duplicate or remove this block to add/remove a website -->
-          <div class="demo-card">
-            <div class="demo-info">
-              <h3>Gym Website</h3>
-              <p>A modern, energetic template for gyms & fitness centers.</p>
-            </div>
-            <div class="demo-btns">
+        <h2>Website Demos</h2>
+        <div class="cards-list">
+          <!-- CARD (copy to add more) -->
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?fit=crop&w=400&q=80" alt="Gym Website Demo" />
+            <h3>Gym Website</h3>
+            <p>Perfect for gyms and fitness centers. Modern, bold, and action-packed.</p>
+            <div class="btn-row">
               <a href="https://your-gym-demo-link.com" target="_blank" class="button demo-btn">Demo</a>
-              <button class="button buy-btn" onclick="showBuyInfo('Gym Website')">Buy</button>
+              <button type="button" class="button buy-btn" onclick="showBuyInfo('Gym Website')">Buy</button>
             </div>
           </div>
-          <div class="demo-card">
-            <div class="demo-info">
-              <h3>Restaurant Website</h3>
-              <p>Elegant, appetizing look for restaurants & cafes.</p>
-            </div>
-            <div class="demo-btns">
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1519864600265-abb23847ef5e?fit=crop&w=400&q=80" alt="Restaurant Website Demo" />
+            <h3>Restaurant Website</h3>
+            <p>Tasteful design for restaurants and cafes. Menu, gallery, reservation-ready.</p>
+            <div class="btn-row">
               <a href="https://your-restaurant-demo-link.com" target="_blank" class="button demo-btn">Demo</a>
-              <button class="button buy-btn" onclick="showBuyInfo('Restaurant Website')">Buy</button>
+              <button type="button" class="button buy-btn" onclick="showBuyInfo('Restaurant Website')">Buy</button>
             </div>
           </div>
-          <!-- DEMO BLOCK END -->
-          <!-- ADD or REMOVE demo-card blocks as needed -->
+          <div class="card">
+            <img src="https://images.unsplash.com/photo-1520880867055-1e30d1cb001c?fit=crop&w=400&q=80" alt="Barber Shop Website Demo" />
+            <h3>Barber Shop Website</h3>
+            <p>Classic, sharp style for barbers and salons. Showcase your lookbook and bookings.</p>
+            <div class="btn-row">
+              <a href="https://your-barber-demo-link.com" target="_blank" class="button demo-btn">Demo</a>
+              <button type="button" class="button buy-btn" onclick="showBuyInfo('Barber Shop Website')">Buy</button>
+            </div>
+          </div>
+          <!-- ADD/REMOVE MORE CARDS AS NEEDED -->
         </div>
-        <!-- Buy Info Modal -->
+
+        <!-- Buy Modal -->
         <div id="buy-modal" class="buy-modal">
           <div class="buy-modal-content">
             <span class="close-modal" onclick="closeBuyInfo()">&times;</span>
-            <h3>Buy This Website</h3>
-            <p>Email me at <b style="color:#4393ff">amithboss555@gmail.com</b><br>
-              Mention the website name and I’ll reply with payment & delivery details.
-            </p>
+            <h3>Want to Buy?</h3>
+            <p>Email me at<br><b style="color:#4393ff">amithboss555@gmail.com</b><br>Include the website name and I'll reply with payment & delivery details.</p>
           </div>
         </div>
       </div>
@@ -71,7 +77,7 @@
     <section id="contact" class="contact">
       <div class="container">
         <h2>Contact Me</h2>
-        <p>Interested in a website or got questions? Fill out the form to contact me directly via email:</p>
+        <p>Interested in a website? Have questions? Let me know!</p>
         <form action="mailto:amithboss555@gmail.com" method="POST" enctype="text/plain">
           <input type="text" name="name" placeholder="Your Name" required>
           <input type="email" name="email" placeholder="Your Email" required>
@@ -88,15 +94,26 @@
       <div class="container">
         <h2>About Me</h2>
         <p>
-          Hi, I'm <b>AMITH.R</b>. I help businesses and individuals get online with modern, ready-to-use websites.<br>
-          My designs are simple, fast, and reliable—just plug in your info and go live!
+          Hi, I'm <b>AMITH.R</b>. I help businesses and individuals create their perfect website, hassle-free.<br>
+          All my websites are responsive, fast, and designed to help you win more customers.
         </p>
       </div>
     </section>
   </main>
 
   <footer>
-    &copy; 2026 AMITH.R | Portfolio
+    <div class="container">
+      &copy; 2026 AMITH.R | Portfolio
+      <!-- (optional social links)
+      <div class="social">
+        <a href="https://github.com/amithrbg" target="_blank" title="GitHub">
+          <svg height="22" viewBox="0 0 16 16" fill="currentColor" style="vertical-align:middle;">
+            <path d="M8 .2a8 8 0 00-2.53 15.6c.4.07.55-.17.55-.38v-1.36c-2.24.48-2.71-1.09-2.71-1.09-.36-.93-.89-1.19-.89-1.19-.73-.5.05-.49.05-.49.8.06 1.23.82 1.23.82.72 1.23 1.87.87 2.33.66.07-.52.28-.88.5-1.08-1.79-.2-3.68-.9-3.68-3.98 0-.88.31-1.6.82-2.17-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 012-.27c.67 0 1.34.09 2 .27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.5.57.82 1.29.82 2.17 0 3.08-1.9 3.77-3.7 3.97.29.25.53.74.53 1.5v2.24c0 .21.15.45.55.38A8 8 0 008 .2z"/>
+          </svg>
+        </a> 
+      </div>
+      -->
+    </div>
   </footer>
 
   <script>
@@ -106,7 +123,7 @@
   toggle.onclick = () => { html.classList.toggle("dark"); localStorage.setItem("amrDark", html.classList.contains("dark")) }
   if(localStorage.getItem("amrDark") === "true") html.classList.add("dark");
 
-  // BUY MODAL LOGIC
+  // BUY MODAL
   function showBuyInfo(site) {
     document.getElementById('buy-modal').style.display='flex';
   }
